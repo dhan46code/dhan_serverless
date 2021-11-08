@@ -21,7 +21,10 @@ const fetchData = async () => {
       })
       .join('');
     result.innerHTML = tours;
-  } catch (error) {}
+  } catch (error) {
+    console.log(error.response.data);
+    result.innerHTML = `<h2>Error fetch data, please check again later...</h2>`;
+  }
 };
 
 fetchData();
