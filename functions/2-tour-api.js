@@ -2,7 +2,7 @@ const touring = require('../assets/tour-api');
 
 exports.handler = async (event, handler) => {
   return {
-    header: {
+    headers: {
       'Access-Control-Allow-Origin': '*',
     },
     statusCode: 200,
