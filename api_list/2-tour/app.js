@@ -2,7 +2,9 @@ const result = document.querySelector('.result_tour');
 
 const fetchData = async () => {
   try {
-    const { data } = await axios.get('/api/2-tour-api');
+    const { data } = await axios.get(
+      'https://dhan-api.netlify.app/api/2-tour-api'
+    );
     const tours = data
       .map((tour) => {
         const { id, name, img, country, info } = tour;
